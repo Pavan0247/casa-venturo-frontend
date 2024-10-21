@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Authentication Page - Admin</title>
+  <!-- Add any meta tags, stylesheets, or other head elements here -->
+</head>
+<body>
+
+<!--    <header class="header">
+        <img src="assets/WHITELOGO.png" alt="Logo" class="logo" />
+        <div class="header-links">
+          <span>CasaVenturo</span>
+          <a href="#">About</a>
+          <button class="green-button">I'm a Vendor</button>
+          <button class="green-button">I'm an Admin</button>
+        </div>
+      </header>-->
+      
+      <!-- New buttons in the top-right corner -->
+  <div class="top-buttons">
+    <button class="green-button">I'm a User</button>
+    <button class="green-button">I'm a Vendor</button>
+  </div>
+
+
+
+
+
+
+      <!-- Body Section -->
+      <div class="body">
+        <div class="left-half">
+          <img src="assets/CASAVENTURO.jpg" alt="CasaVenturo" class="main-image fixed-image" />
+        </div>
+        <div class="right-half">
+          <!-- Login Section -->
+          <div *ngIf="isLoginPage" class="login-section">
+            <h2>Hola Team-Member, Please Login to Continue. </h2> <br>
+            <form>
+              <div class="input-group">
+                <input type="text" placeholder="Username" />
+              </div>
+              <div class="input-group">
+                <input type="password" placeholder="Password" />
+              </div>
+              <button class="green-buttonlogin">Login</button>
+            </form>
+             <br> 
+            <p>Forgot Password? <a href="#"> Click Here</a></p>
+
+            <p>Don't have an account? <a href="#" (click)="togglePage()">Register</a></p>
+          </div>
+      
+          <!-- Signup Section -->
+          <div *ngIf="!isLoginPage" class="signup-section">
+            <h2>Hello Team-Member, Please Register to Continue. </h2> <br> <form>
+              <div class="input-group">
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="input-group">
+                <input type="password" placeholder="Password" />
+              </div>
+              <div class="input-group">
+                <input type="password" placeholder="Confirm Password" />
+              </div>
+              <button class="green-buttonsignup">Register</button>
+            </form> <br>
+            <p>Already have an account? <a href="#" (click)="togglePage()">Login</a></p>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>  

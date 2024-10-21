@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mt-3">
+      <div class="card">
+        <div class="card-horizontal">
+          <div class="img-square-wrapper">
+            <img
+              class=""
+              [src]="
+                serviceTypeImages[booking.serviceType] ||
+                'http://via.placeholder.com/300x180'
+              "
+              alt="Card image cap"
+              style="width: 100%"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">
+              Booking for - <span id="date">{{ bookingDate }}</span>
+            </h3>
+            <h4 class="card-title">
+              Service Type - <span id="type">{{ booking.serviceType }}</span>
+            </h4>
+            <h4 class="card-title">
+              Price - <span id="price">&#8377;{{ booking.price }}</span>
+            </h4>
+            <h5 class="card-title">
+              Provider Name - <span id="name">{{ booking.vendorName }}</span>
+            </h5>
+            <p class="card-text">
+              Description -
+              <span id="description">{{ booking.description }}</span>
+            </p>
+            <div class="feedback">
+              <button class="btn btn-primary" (click)="display()">
+                Give Feedback
+              </button>
+              <form action="" [formGroup]="feedbackForm" (ngSubmit)="submit()">
+                <mat-form-field *ngIf="show">
+                  <mat-label>Write a review</mat-label>
+                  <input matInput formControlName="message" />
+                </mat-form-field>
+                <button class="btn btn-danger" (click)="display()" *ngIf="show">
+                  Cancel
+                </button>
+                <button class="btn btn-success" *ngIf="show">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ lastUpdatedText }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

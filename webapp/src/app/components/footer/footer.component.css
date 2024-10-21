@@ -1,0 +1,47 @@
+footer {
+  margin-top: 5%;
+  background-color: #384b42;
+  color: #fff;
+}
+
+.accent-color {
+  color: rgb(39, 183, 134);
+}
+
+h5 {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul.list-unstyled li a i {
+  margin-right: 5px;
+  color: rgb(39, 183, 134);
+}
+
+.col-md-3 {
+  padding: 15px;
+}
+
+.col-md-3 ul.list-unstyled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-md-3 p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: rgb(39, 183, 134); /* Use the accent color for contact info */
+}
+

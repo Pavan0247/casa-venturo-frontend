@@ -1,0 +1,193 @@
+html {
+  height: min-content;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: rgb(255, 255, 255);
+  padding: 10px 0;
+  box-shadow: 0px 0px 1px black;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+.company-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.exclaim {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 1.5rem;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start; /* Align filter field and search bar on the same axis */
+  align-items: center;
+  margin-right:10px;
+}
+
+.selections {
+  margin-right: 35px; /* Add space between filter field and search bar */
+  margin-top: 20px;
+}
+
+.search-icon {
+  margin: 1rem 0.5rem; /* Reduce space between search button and refresh button */
+  cursor: pointer;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.search input.search-field {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  width: 400px;
+  margin-right: 20px;
+}
+
+.spacer {
+  width: 2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: relative;
+  margin-right: 40px;
+}
+
+.profile-button img {
+  border-radius: 50%;
+}
+
+.profile-button,
+.dropdown-content {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  right: 0;
+  top: 5vh;
+  white-space: nowrap;
+}
+
+.profile-button:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.profile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-nav li {
+  margin-bottom: 10px;
+}
+
+.profile-nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.profile-nav a:hover {
+  background-color: #34d198;
+  color: #000000;
+}
+
+#specific {
+  color: #000000;
+}
+
+
+/* Decrease the width of the filter field */
+.mat-form-field {
+  width: 12rem;
+}
+
+/* Style the dropdown menu on hover */
+.mat-option:hover {
+  background-color: green; /* Change the background color */
+  color: white; /* Change the text color */
+}
+
+/* Ensure component layout remains stable when zooming in or out */
+@media (max-width: 600px) {
+  .header {
+    padding: 5px 0;
+    justify-content: space-around;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .search input.search-field {
+    width: 70%;
+  }
+
+  .spacer {
+    width: 10px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .header-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profile-dropdown {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}

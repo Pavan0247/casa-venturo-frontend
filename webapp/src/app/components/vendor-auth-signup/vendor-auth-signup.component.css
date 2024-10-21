@@ -1,0 +1,195 @@
+/* Header Styles 
+.header {
+  background-color: #50ac50;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}*/
+
+
+.signup-section input {
+    /* ... */
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  
+  
+  
+  h2 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  
+  
+  /* Add these styles for the new buttons */
+  .top-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    padding: 20px;
+  }
+  
+  .top-buttons button {
+    background-color: #50ac50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer; 
+    border-radius: 20px; /* Use a value that creates a round shape, adjust as needed */
+    margin-left: 15px;
+  }
+  
+  /* Add these styles for the "Forgot Password?" link */
+  .login-section a {
+    color: #50ac50;
+    text-decoration: none;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  
+  .logo {
+    width: 50px;
+    margin-left: 10px;
+    height: auto;
+  }
+  
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-links span {
+    color: white;
+    margin-right: 20px;
+  }
+  
+  .header-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .green-button {
+    background-color: #50ac50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Body Styles */
+  .body {
+    display: flex;
+  /*  border-top: 1px solid rgb(227, 227, 227); */
+    padding: 0 px;
+  }
+  
+  .left-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  
+  
+  .main-image {
+    max-width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .right-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  /* Login and Signup Styles */
+  .login-section,
+  .signup-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #50ac50;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button.green-button {
+    background-color: #50ac50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  a {
+    color: #50ac50;
+  
+  
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .body {
+      flex-direction: column;
+    }
+  
+  
+  
+  
+  }
+  
+  
+  
+  button.green-buttonlogin{
+    background-color: #50ac50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%; /* Add this width property */
+  }
+  
+  button.green-buttonsignup{
+    background-color: #50ac50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%; /* Add this width property */
+  }
+  
+  
+  

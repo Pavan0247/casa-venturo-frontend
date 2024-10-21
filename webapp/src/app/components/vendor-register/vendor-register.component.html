@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor-Details-Page</title>
+  </head>
+  <body>
+    <div class="">
+      <!-- <div class="background">
+        <div class="bkg-left"></div>
+        <div class="bkg-right"></div>
+      </div> -->
+      <div class="container">
+        <div class="image">
+          <img src="../../../assets/images/VendorRegistrationG.png" alt="" />
+        </div>
+
+        <div class="sub-container">
+          <div class="header">
+            Hi {{ vendorname }}, Tell us about your service
+          </div>
+          <form
+            [formGroup]="vendorRegistrationForm"
+            (ngSubmit)="registerVendor()"
+          >
+            <div class="grid-view">
+              <mat-form-field class="vendorServiceType alignment item-3">
+                <mat-label for="serviceType">Service Type</mat-label>
+                <mat-select formControlName="serviceType" id="serviceType">
+                  <mat-option value="">Select a Service Type</mat-option>
+                  <mat-option value="Home Cleaning">Home Cleaning</mat-option>
+                  <mat-option value="Gardening">Gardening</mat-option>
+                  <mat-option value="Painting">Painting</mat-option>
+                  <mat-option value="Plumbing">Plumbing</mat-option>
+                  <mat-option value="Electrician">Electrician</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="description alignment item-4">
+                <mat-label>Description</mat-label>
+                <input
+                  matInput
+                  formControlName="description"
+                  type="text"
+                  placeholder="Tell us about your service!"
+                />
+              </mat-form-field>
+
+              <mat-form-field class="vendorPrice alignment item-5">
+                <mat-label>Price</mat-label>
+                <input
+                  matInput
+                  formControlName="price"
+                  type="text"
+                  placeholder="Set a price"
+                />
+              </mat-form-field>
+
+              <mat-form-field class="location alignment item-7">
+                <mat-label for="location">Located in</mat-label>
+                <mat-select formControlName="location" id="location">
+                  <mat-option value="">Select a city</mat-option>
+                  <mat-option value="Hyderabad">Hyderabad</mat-option>
+                  <mat-option value="Delhi">Delhi</mat-option>
+                  <mat-option value="Bangalore">Bangalore</mat-option>
+                  <mat-option value="Pune">Pune</mat-option>
+                  <mat-option value="Chennai">Chennai</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="vendorStartDate alignment item-8">
+                <mat-label>Service Start Date</mat-label>
+                <input
+                  matInput
+                  formControlName="startDate"
+                  [matDatepicker]="startDatePicker"
+                  placeholder="You are available from..."
+                  [min]="currentDate"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="startDatePicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field class="vendorEndDate alignment item-9">
+                <mat-label>Service End Date</mat-label>
+                <input
+                  matInput
+                  formControlName="endDate"
+                  [matDatepicker]="endDatePicker"
+                  placeholder="You are available till..."
+                  [min]="currentDate"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="endDatePicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #endDatePicker></mat-datepicker>
+              </mat-form-field>
+
+              <div class="submit">
+                <button
+                  class="btn"
+                  type="submit"
+                  [disabled]="!vendorRegistrationForm.valid"
+                >
+                  Register
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

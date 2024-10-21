@@ -1,0 +1,38 @@
+<!-- <p>feedback works!</p> -->
+<div class="feedback-container">
+    <h1>Rate Us</h1>
+    
+    <!--Adding form to submit feedback here-->
+    <div class='fb-form'>
+        <form class='form-group'>
+          <h2>Tell us what you think</h2>
+   
+          <textarea [(ngModel)]="feedback.comment" class='form-control' id='fb-comment' name='comment' placeholder='Write Something'></textarea>
+         
+         <div class="container mt">
+            <!-- <h5>Input</h5> -->
+            <ngb-rating [max]="5" (click)="GetRating()" [formControl]="ratingcontrol"></ngb-rating>
+         </div>
+         <!-- <div class="container mt">
+            <h1>Output</h1>
+            <ngb-rating [max]="5" [rate]="finarating" [readonly]="true"></ngb-rating>
+         </div> -->
+         <!-- <h3>Final rating {{finarating}}</h3>
+         <h3>Rating count {{ratingcount}}</h3> -->
+          <button (click)="submitFeedbacklist()" class='form-control btn btn-primary w-25 mt' type='submit'>
+      
+            Submit 
+          </button>
+          <!-- <input class='form-control btn btn-primary' type='submit'> -->
+        </form>
+      </div>
+
+    <!-- <div class="feedback-list">
+      <h2>Feedback List</h2>
+      <ul> -->
+        <!-- <li *ngFor="let feedback of feedbackList">  -->
+          <!-- Display feedback details here -->
+        <!-- </li> -->
+      <!-- </ul>
+    </div> -->
+  </div>

@@ -1,0 +1,82 @@
+<app-back-btn style="z-index: 10"></app-back-btn>
+<div class="close-btn" (click)="changeValue()"><mat-icon>close</mat-icon></div>
+<div class="content">
+  <div class="sub-content">
+    <h1>Update Details</h1>
+    <div class="icon">
+      <img src="assets/images/avatar.svg" alt="" srcset="" />
+    </div>
+    <!-- AUTH FORM -->
+    <form action="" [formGroup]="authForm" class="form-grid">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="userName" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <div class="verify" *ngIf="!emailVerified">
+        <button class="send-otp" (click)="getOtp()">Send OTP</button>
+        <input matInput id="secret" />
+        <button class="otp-verify" (click)="verifyOtp()">Verify</button>
+      </div>
+
+      <div class="status" *ngIf="emailVerified">
+        Email verified <mat-icon>verified_user</mat-icon>
+      </div>
+    </form>
+
+    <!-- USER FORM -->
+    <form action="" [formGroup]="userForm" class="form-grid">
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="dobPicker" formControlName="dob" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="dobPicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #dobPicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+          <mat-option value="Others">Others</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" />
+      </mat-form-field>
+
+      <button id="change" (click)="changePass()">Change Password</button>
+    </form>
+    <div class="button">
+      <button
+        type="button"
+        (click)="onSubmit()"
+        [disabled]="authForm.valid && userForm.valid ? false : true"
+        [style.background-color]="
+          authForm.valid && userForm.valid ? 'green' : 'red'
+        "
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>

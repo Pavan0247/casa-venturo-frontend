@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <img src="assets/images/black-logo.png" alt="Logo" />
+        </div>
+        <div class="company-name">CasaVenturo</div>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- after here ok -->
+      <div class="header-right">
+        <div class="header-link"><a routerLink="/about-us" id="specific">About Us</a></div>
+        <div class="header-link"><a routerLink="/contact-us" id="specific">Contact Us</a></div>
+        <div class="profile-dropdown">
+          <div class="profile-button">
+            <img
+              src="assets/images/avatar.svg"
+              alt="My Profile"
+              style="width: 60px; height: 60px"
+            />
+            <div class="exclaim" *ngIf="isProfileUpdated"><mat-icon>notification_important</mat-icon></div>
+          </div>
+          <div class="dropdown-content">
+            <nav class="profile-nav">
+              <ul>
+                <li><a (click)="gotoProfileUpdate()">Update Profile</a></li>
+                <li *ngIf="show"><a (click)="gotoOrderPage()">My Orders</a></li>
+                <li><a (click)="logout()">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+

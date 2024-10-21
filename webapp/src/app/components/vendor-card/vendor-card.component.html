@@ -1,0 +1,45 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="header-image"
+      [style.background-image]="
+        'url(' + serviceTypeAvatarImages[data.serviceType] + ')'
+      "
+    ></div>
+    <mat-card-title>{{ data.serviceType }}</mat-card-title>
+    <mat-card-subtitle>{{ data.vendorName }}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- TODO ADD ALT IMAGE -->
+  <img
+    mat-card-image
+    *ngIf="serviceTypeImages[data.serviceType]"
+    [src]="serviceTypeImages[data.serviceType]"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <mat-divider></mat-divider>
+    <div class="price">&#8377;{{ data.price }}</div>
+    <div class="grid">
+      <div class="date-posted">
+        <mat-icon>date_range</mat-icon><span class="span-out">Date Posted: <span>{{ datePosted }}</span></span>
+      </div>
+      <div class="available-from">
+        <mat-icon>date_range</mat-icon><span class="span-out">Available From: <span>{{ startDate }}</span></span>
+      </div>
+      <div class="available-till">
+        <mat-icon>date_range</mat-icon> <span class="span-out">Available Till: <span>{{ endDate }}</span></span>
+      </div>
+      <div class="location">
+        <mat-icon> location_on</mat-icon><span class="span-out">{{ data.location }}</span>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="openBooking()">Book Now</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>

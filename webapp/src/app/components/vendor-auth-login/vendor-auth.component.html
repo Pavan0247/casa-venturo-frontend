@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Authentication Page - Vendor - login</title>
+  <!-- Add any meta tags, stylesheets, or other head elements here -->
+</head>
+<body>
+
+<!--    <header class="header">
+        <img src="assets/WHITELOGO.png" alt="Logo" class="logo" />
+        <div class="header-links">
+          <span>CasaVenturo</span>
+          <a href="#">About</a>
+          <button class="green-button">I'm a Vendor</button>
+          <button class="green-button">I'm an Admin</button>
+        </div>
+      </header>-->
+      
+      <!-- New buttons in the top-right corner -->
+  <div class="top-buttons">
+    <button class="green-button"  (click)="gotoUserLogin()">I'm a User</button>
+    <button class="green-button" (click)="gotoAdminLogin()">I'm an Admin</button>
+  </div>
+
+
+
+
+
+
+      <!-- Body Section -->
+      <div class="body">
+        <div class="left-half">
+          <img src="assets/CASAVENTURO.jpg" alt="CasaVenturo" class="main-image fixed-image" />
+        </div>
+        
+
+
+        <div class="right-half">
+
+
+
+          <!-- Login Section -->
+          <div class="login-section">
+            <h2>Hello Fellow Vendor, Please Login to Continue. </h2> <br>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="input-group">
+                <input type="text" formControlName="userName" placeholder="Username" />
+              </div>
+              <div class="input-group">
+                <input type="password" formControlName="passwordHash" placeholder="Password" />
+              </div>
+              <button class="green-buttonlogin">Login</button>
+            </form>
+             <br> 
+            <p>Forgot Password? <a href="#"> Click Here</a></p>
+
+         
+         
+         
+         
+         
+         
+         
+            <p>Don't have an account? <a href="/vendorsignup" >Register</a></p>
+          </div>
+       
+        </div>
+      </div>
+  </body>
+</html>  

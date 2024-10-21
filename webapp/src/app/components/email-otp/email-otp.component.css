@@ -1,0 +1,22 @@
+::ng-deep .otp-class .mat-dialog-container {
+    border: 0.5px solid;
+    text-align: center;
+    background: rgb(180, 240, 180); 
+    padding: 20px;
+}
+
+.btn-color {
+    background-color: #63b968;
+    margin-left: 15rem;
+    color: #fff;
+    border: 1px solid;
+}
+
+.clickButton {
+    margin: 1rem;
+}
+
+.full-width {
+    margin-top: 1rem;
+    width: 100%;   
+}  

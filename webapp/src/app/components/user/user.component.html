@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User-Details-Page</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="background">
+      <div class="bkg-left"></div>
+      <div class="bkg-right"></div>
+    </div>
+    <div class="container">
+      <div class="image">
+        <img src="img2.jpg" alt="" />
+      </div>
+
+      <div class="sub-container">
+        <div class="header">Your Profile</div>
+
+        <div class="form">
+          <form>
+            <!-- <label for="userId">User ID:</label>
+            <input type="text" id="userId" [value]="userProfile.userId" readonly> -->
+
+            <label for="username">Username:</label>
+            <input class="my2" type="text" id="username" value="{{userProfile.userName}}" readonly>
+
+            <label for="firstName">First Name:</label>
+            <input class="my2" type="text" id="firstName" value="{{userProfile.firstName}}" [readonly]="!isEditable">
+
+            <label for="lastName">Last Name:</label>
+            <input class="my2" type="text" id="lastName" value="{{userProfile.lastName}}" [readonly]="!isEditable">
+
+            <label for="email">Email:</label>
+            <input class="my2" type="email" id="email" value="{{userProfile.email}}" [readonly]="!isEditable">
+
+            <label for="dob">Date of Birth</label>
+            <input class="my2" type="date" id="dob" [(ngModel)]="userProfile.dob" name = "dob" [readonly]="!isEditable">
+
+            <label for="gender">Gender</label>
+            <input class="my2" class="my2" type="text" id="gender" [(ngModel)]="userProfile.gender" name = "gender" [readonly]="!isEditable">
+
+
+            <label for="password">Password:</label>
+            <input class="my2" type="password" id="password" value="{{userProfile.passwordHash}}" readonly>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input class="my2" type="text" id="phoneNumber" value="{{userProfile.phoneNumber}}" [readonly]="!isEditable">
+
+            <label for="address">Address:</label>
+            <textarea class="my2" id="address" value="{{userProfile.address}}" [readonly]="!isEditable" rows="3"
+              cols="66"></textarea>
+
+          </form>
+        </div>
+
+        <button class="btn" (click)="goToEditPage()">Edit Profile</button>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- <router-outlet></router-outlet> -->

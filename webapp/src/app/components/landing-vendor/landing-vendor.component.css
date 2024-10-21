@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 5vh;
+  grid-column-gap: 5vh;
+  justify-content: space-around;
+  padding-top: 5%;
+  height: max-content;
+}
+
+.grid-item {
+  width: 20rem;
+  height: fit-content;
+}
+
+body {
+  height: max-content;
+  background: #f5f5f5;
+}
+
+.scroll-to-top-button {
+  width: 6vh;
+  height: 6vh;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 10;
+  background-color: #1cd57c;
+  color: #fff;
+  border: none;
+  border-radius: 60%;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #00525d;
+}
+
+app-booking {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.495);
+  width: 100%;
+  height: 100%;
+}

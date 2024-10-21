@@ -1,0 +1,108 @@
+/* Container Styles */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: #fff; /* Change the background color to white */
+  border: 1px solid #ccc; /* Add a subtle border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  overflow: hidden; /* Hide overflowing content */
+  font-family: Arial, sans-serif; /* Use a common font */
+}
+
+/* Close Button Styles */
+.close {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 10px; /* Add margin to separate the close button */
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.close:hover {
+  color: #ff0000; /* Change the close icon color on hover */
+}
+
+/* Left Section Styles */
+.left {
+  flex-basis: 30%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; /* Rounded corners for the left section */
+}
+
+/* Right Section Styles */
+.right {
+  flex-basis: 70%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; /* Rounded corners for the right section */
+  overflow-y: auto; /* Add scrollbars when content overflows */
+  max-height: 40vh; /* Define a maximum height for scrolling */
+}
+
+/* Feedback Section Styles */
+.feedback {
+  background-color: #fff; /* Change the background color to white */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Rounded corners for feedback items */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.review {
+  flex-basis: 100%;
+}
+
+/* Form Element Styles */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vendorName,
+.vendorService,
+.price,
+.select-date {
+  margin-bottom: 15px;
+}
+
+/* Button Styles */
+button[type="submit"] {
+  background-color: #34d198;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #269c75;
+}
+
+/* Feedback Section Styles */
+.feedbacks {
+  margin-top: 20px;
+}
+
+.feedback .message {
+  margin-top: 10px;
+  color: #333; /* Change text color for better readability */
+}

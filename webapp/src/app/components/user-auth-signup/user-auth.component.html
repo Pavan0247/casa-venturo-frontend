@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Authentication Page - User - Signup </title>
+  <!-- Add any meta tags, stylesheets, or other head elements here -->
+</head>
+
+
+<body>
+
+<!--    <header class="header">
+        <img src="assets/WHITELOGO.png" alt="Logo" class="logo" />
+        <div class="header-links">
+          <span>CasaVenturo</span>
+          <a href="#">About</a>
+          <button class="green-button">I'm a Vendor</button>
+          <button class="green-button">I'm an Admin</button>
+        </div>
+      </header>-->
+      
+      <!-- New buttons in the top-right corner -->
+  <div class="top-buttons">
+    <button class="green-button" (click)="gotoVendorLogin()">I'm a Vendor</button>
+    <button class="green-button" (click)="gotoAdminLogin()">I'm an Admin</button>
+  </div>  
+
+
+
+
+      <!-- Body Section -->
+      <div class="body">
+        <div class="left-half">
+          <img src="assets/CASAVENTURO.jpg" alt="CasaVenturo" class="main-image fixed-image" />
+        </div>
+        
+
+
+
+
+        <div class="right-half">
+
+
+
+           <!-- Signup Section -->
+          <div class="signup-section">
+            <h2>Hello New User, Please Register to Continue. </h2> <br> 
+            <form [formGroup]="registrationForm" (ngSubmit)="register()">
+              
+              <div class="input-group">
+                <input type="text" placeholder="Name" formControlName="name" />
+              </div>
+
+              <div class="input-group">
+                <input type="text" placeholder="Username" formControlName="userName" />
+              </div>
+              
+              <div class="input-group">
+                <input type="email" placeholder="Email" formControlName="email" />
+                <!-- Display email validation error message -->
+                <span class="text-danger" *ngIf="registrationForm.controls['email'].dirty && registrationForm.hasError('required','email')">*Email is required</span>
+              </div>
+
+              <div class="input-group">
+                <input type="password" placeholder="Password" formControlName="passwordHash" />
+                <!-- Display password validation error message -->
+                <span class="text-danger" *ngIf="registrationForm.controls['passwordHash'].dirty && registrationForm.hasError('required','passwordHash')">*Minimum length is 8 characters</span>
+              </div>
+
+<!--              <div class="input-group">
+                <input type="password" placeholder="Confirm Password" formControlName="confirmPassword"/>
+              </div> 
+              <div *ngIf="registrationForxm.hasError('passwordMismatch')" class="error-message">
+                Passwords do not match.
+              </div> -->
+
+              
+              <button type="button" class="green-buttonsignup">Register</button>
+            </form> <br>
+            <p>Already have an account? <a href="/userlogin"     >Login</a></p>
+          </div>
+        </div>
+      </div>
+  </body>
+
+</html>  

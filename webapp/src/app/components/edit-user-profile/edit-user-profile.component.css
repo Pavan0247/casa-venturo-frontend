@@ -1,0 +1,143 @@
+body {
+  background-color: #4f3f30;
+}
+
+.header {
+  color: #525357;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  margin: 8px;
+
+}
+
+label {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+}
+
+input {
+  outline: none;
+  width: 80%;
+  padding: 0.2rem;
+}
+
+.alignment,
+label,
+input {
+  display: block;
+  margin: 3px;
+
+}
+
+input,
+textarea {
+  border: 1.5px solid black;
+
+
+}
+
+/* .grid-view {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 5vh;
+} */
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* .background {
+  display: flex;
+  filter: blur(0.11em);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
+.container {
+  background-color: rgb(244, 252, 244);
+  height: 90%;
+  width: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 0px 0px 30px rgb(154, 154, 154);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.bkg-left {
+  flex-basis: 40%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-image: url("img2.jpg");
+  background-repeat: no-repeat;
+}
+
+.bkg-right {
+  flex-basis: 60%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #fffefd;
+}
+
+.image {
+  flex-basis: 38.8%;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-container {
+  flex-basis: 61.2%;
+  padding: 2.5rem;
+}
+
+.btn {
+  /* font-family: "Signika Negative", sans-serif;
+    font-weight: 500;
+    font-size:medium;
+    background-color: #b090a7;
+    border: solid rgb(250, 212, 212) 1.5px;
+    border-radius: 6px;
+    padding: 6px;
+    color: white;
+    margin: 6px; */
+
+
+  background-color: rgb(50, 165, 50);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+
+
+}
+
+.btn:hover {
+  background-color: rgb(126, 173, 129);
+  cursor: pointer;
+  /* font-size: large; */
+}
+
+.form {
+  padding: 5px;
+}
+
+.my2{
+  width: 60%;
+  border-radius: 2px;
+  border: 2px solid #9d9d9d;
+}

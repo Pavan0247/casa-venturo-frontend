@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <app-header-admin style="position: sticky; top: 0; border: 0"></app-header-admin>
+    <div class="content">
+      <app-back-btn></app-back-btn>
+      <div class="navigation">
+        <ul>
+          <li (click)="changeView()">
+            <a class="nav"><mat-icon>dashboard</mat-icon>Dashboard</a>
+          </li>
+          <!-- <li (click)="changeView1()">
+            <a class="nav"><mat-icon>medical_services</mat-icon>API Health</a>
+          </li> -->
+          <li>
+            <a class="nav" (click)="logout()"
+              ><mat-icon>exit_to_app</mat-icon>Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="dashboard">
+        <header>Dashboard</header>
+        <div class="special">
+          <label class="label-title" for="">Registered Users</label>
+          <label class="label-title" for="">Registered Vendors</label>
+          <h2 class="counter-numbers">{{ userBase }}+</h2>
+          <h2 class="counter-numbers">{{ vendorBase }}+</h2>
+        </div>
+
+        <div class="pie-chart">
+          <div class="vendor-pie">
+            <canvas id="vendor_to_user_ratio"></canvas>
+          </div>
+        </div>
+
+        <div class="city-pop user-base">
+          <label class="vendor-pie" for="">Vendors in each City</label>
+          <div class="vendor-pop-base">
+            <canvas id="vendor-location-size"></canvas>
+          </div>
+        </div>
+
+        <div class="city-avg-price user-base">
+          <label class="vendor-pie" for=""
+            >Average Price of Service per City</label
+          >
+
+          <div class="vendor-pop-base">
+            <canvas id="avg-city-price"></canvas>
+          </div>
+        </div>
+      </div>
+      <app-scroll-up></app-scroll-up>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

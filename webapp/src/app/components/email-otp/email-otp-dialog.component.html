@@ -1,0 +1,24 @@
+<div class="mat-dialog-container">
+  <div class="container">
+    <h1 mat-dialog-title>OTP Verification</h1>
+    <mat-dialog-content>
+      <form (ngSubmit)="verifyOTP()" #otpForm="ngForm">
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput type="email" id="email" name="email" placeholder="Email" required [(ngModel)]="email" />
+          <mat-label>Enter OTP</mat-label>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput type="text" id="otp" name="otp" placeholder="Enter OTP" required [(ngModel)]="otp" />
+          <mat-label>Enter OTP</mat-label>
+        </mat-form-field>
+        <div *ngIf="isResendDisabled" class="countdown-timer">
+          Resend OTP in {{ countdown }} seconds
+        </div>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-raised-button class="btn-color" (click)="sendOTP()">{{ isResendDisabled ? 'Resend OTP' : 'Send OTP' }}</button>
+      <button mat-raised-button class="btn-color" mat-dialog-close (click)="verifyOTP()">Verify OTP</button>
+    </mat-dialog-actions>
+  </div>
+</div>

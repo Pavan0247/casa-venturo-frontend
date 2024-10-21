@@ -1,0 +1,108 @@
+/* Close button at the top right corner */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer; /* Add cursor pointer for better usability */
+}
+
+/* Center the content vertically and horizontally */
+.content {
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+  background-color: #f8f8f8; /* Light background color */
+}
+
+/* Main content area */
+.sub-content {
+  width: 80%;
+  max-width: 80rem; /* Limit content width for readability */
+  padding: 2rem; /* Add spacing around the content */
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  text-align: center;
+}
+
+/* Icon styles */
+.icon {
+  padding: 1rem; /* Add spacing around the icon */
+}
+
+/* Responsive image styles */
+img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Grid container for form elements */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  gap: 1rem; /* Add spacing between form elements */
+}
+
+/* Margin for form fields */
+mat-form-field {
+  margin: 0.5rem 0; /* Vertical margin for form fields */
+  width: 100%; /* Ensure form fields take the full width */
+}
+
+/* Center-align the heading */
+h1 {
+  text-align: center;
+  font-size: 1.5rem; /* Increase font size for headings */
+  margin-bottom: 1.5rem; /* Add spacing below headings */
+}
+
+/* Style the button for form submission */
+button {
+  background-color: #508c6f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem; /* Increase padding for buttons */
+  font-size: 1rem; /* Font size for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add space below buttons */
+button:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Center-align the button container */
+.button {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.verify{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.verify button{
+  height: fit-content;
+}
+
+.send-otp{
+  flex-basis: 100%;
+}
+.otp-input{
+  flex-basis: 50%;
+}
+.otp-verify{
+  flex-basis: 50%;
+}
+
+.status{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

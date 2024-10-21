@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <app-header-vendor style="position: sticky; top: 0; z-index: 50"></app-header-vendor>
+    <app-back-btn style="z-index: 40;"></app-back-btn>
+    <div class="container">
+      <div class="grid-item" *ngFor="let vendor of vendorList">
+        <app-service-card [data]="vendor"></app-service-card>
+      </div>
+      <app-scroll-up></app-scroll-up>
+    </div>
+
+    <div class="overlay" style="z-index: 52;" *ngIf="show">
+      <app-vendor-register
+        style="width: 80%; height: 80%; z-index: 53;"
+      ></app-vendor-register>
+      <div class="close" (click)="change()"><mat-icon>close</mat-icon></div>
+    </div>
+    <div class="add-btn" (click)="change()">Add Service</div>
+    <app-footer></app-footer>
+  </body>
+</html>

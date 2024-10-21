@@ -1,0 +1,52 @@
+<div class="container">
+  <form [formGroup]="bookingDate" (ngSubmit)="gotoPayment()" class="left">
+    <div class="title">Select the date when you are available</div>
+    <div class="vendorName">
+      <mat-icon>person</mat-icon
+      ><span
+        >Vendor Name: <span>{{ sharedData.vendorName }}</span></span
+      >
+    </div>
+    <div class="vendorService">
+      <mat-icon>build</mat-icon><span>Service Type:</span>
+      <span>{{ sharedData.serviceType }}</span>
+    </div>
+    <div class="price">
+      <mat-icon> attach_money</mat-icon><span>Price: </span
+      ><span>{{ sharedData.price }}</span>
+    </div>
+    <div class="price">
+      <mat-icon>description</mat-icon><span>Description: </span
+      ><span>{{ sharedData.description }}</span>
+    </div>
+    <div class="select-date">
+      <mat-form-field class="vendorStartDate alignment item-8">
+        <mat-label>Service Date</mat-label>
+        <input
+          formControlName="blockedDate"
+          matInput
+          [min]="minDate"
+          [max]="maxDate"
+          [matDatepickerFilter]="dateFilter"
+          [matDatepicker]="startDatePicker"
+          placeholder="You are available on"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <button type="submit" [disabled]="!bookingDate.valid">Pay Now</button>
+  </form>
+  <div class="right">
+    <div class="feedbacks" *ngFor="let value of feedbacks">
+      <div class="review">
+        <label for="">Anonymous User</label>
+        <div class="message">{{ value.message }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="close" (click)="close()"><mat-icon>close</mat-icon></div>
+</div>

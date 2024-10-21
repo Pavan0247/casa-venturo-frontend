@@ -1,0 +1,26 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.feedback{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn-primary{
+    flex-basis: 20%;
+}
+
+form{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+mat-form-field{
+    flex-basis :50% ;
+}

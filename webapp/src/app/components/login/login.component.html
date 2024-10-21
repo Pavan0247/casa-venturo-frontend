@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <app-back-btn style="z-index: 10;"></app-back-btn>
+      <div class="left-window">
+        <div class="shape"></div>
+        <img src="assets/images/login-art.svg" alt="" srcset="" />
+      </div>
+      <div class="right-window">
+        <div class="icon">
+          <img src="assets/images/avatar.svg" alt="" srcset="" />
+        </div>
+        <div class="title">Welcome</div>
+        <div class="form">
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="role">
+                <div class="vendor">Vendor</div>
+                <div class="user">User</div>
+                <div class="admin">Admin</div>
+            </div>
+            <mat-slider min="1" max="3" step="1" value="2">
+              <input matSliderThumb formControlName="role"/>
+            </mat-slider>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email"/>
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="passwordHash"/>
+            </mat-form-field>
+            <div class="forgot-password" (click)="gotoForgotPass()">Forgot password?</div>
+            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+            <div class="new-user" (click)="gotoSignup()">New User?</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

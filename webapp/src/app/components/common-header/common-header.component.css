@@ -1,0 +1,181 @@
+html {
+  height: min-content;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: rgb(232, 232, 232);
+  padding: 10px 0;
+  box-shadow: 0px 0px 10px black;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+.company-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.exclaim {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 1.5rem;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selections {
+  width: min-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 50px; /* Adjust the size as needed */
+  margin-right: 15px; /* Add spacing after the logo */
+  margin-left: 34px; /* Add spacing before the search field */
+}
+
+.search input.search-field {
+  border: 1px solid #ccc; /* Add grey outline */
+  border-radius: 20px;
+  padding: 10px;
+  width: 400px; /* Adjust the width as needed */
+}
+
+.spacer {
+  width: 2rem; /* Add spacing between logo and search field */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 40px; /* Add spacing between links */
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: relative;
+  margin-right: 40px;
+}
+
+.profile-button img {
+  border-radius: 50%;
+}
+
+.profile-button,
+.dropdown-content {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  right: 0;
+  top: 5vh; /* Adjust the distance from the button */
+  white-space: nowrap; /* Prevent menu items from wrapping */
+}
+
+.profile-button:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.profile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-nav li {
+  margin-bottom: 10px;
+}
+
+.profile-nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.profile-nav a:hover {
+  background-color: #34d198; /* Highlight color on hover */
+  color: #000000;
+}
+
+#specific {
+  color: #000000;
+}
+
+/* @media (max-width: 600px) {
+    .header {
+      padding: 5px 0;
+      justify-content: space-around;
+    }
+  
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  
+    .search input.search-field {
+      width: 70%;
+    }
+  
+    .spacer {
+      width: 10px;
+    }
+  
+    .header-right {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .header-link {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .profile-dropdown {
+      margin-right: 0;
+      margin-top: 10px;
+    } */
+/* } */

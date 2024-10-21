@@ -1,0 +1,32 @@
+.welcome-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Gap between columns */
+  justify-items: center; /* Center items horizontally in each column */
+  align-items: center; /* Center items vertically in each row */
+  height: 100vh; /* Set the container height to the viewport height */
+  padding: 20px;
+}
+
+.left-page-1 img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  margin-left: 100px;
+}
+
+.right-page-2 {
+  text-align: center; /* Center text and buttons horizontally */
+
+}
+.right-page-2 .role-text{
+  color: rgb(75, 75, 75);
+  
+}
+
+.green-button {
+  background-color: rgb(50, 165, 50);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}

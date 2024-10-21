@@ -1,0 +1,119 @@
+body {
+  background-color: #fffefd;
+  width: fit-content;
+  height: fit-content;
+}
+.header {
+  color: #000;
+  font-size: 2.5rem;
+  font-family: "Nunito", sans-serif;
+}
+
+label {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+}
+
+input {
+  outline: none;
+  width: 80%;
+  padding: 0.2rem;
+}
+
+form {
+  padding: 4%;
+}
+
+.alignment,
+label,
+input {
+  display: block;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 5vh;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background {
+  display: flex;
+  filter: blur(0.11em);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container {
+  background-color: #fffefd;
+  height: fit-content;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 10rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.bkg-left {
+  flex-basis: 40%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-image: url("../../../assets/images/VendorRegistrationG.png");
+  background-repeat: no-repeat;
+}
+
+.bkg-right {
+  flex-basis: 60%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #fffefd;
+}
+
+.image {
+  flex-basis: 38.8%;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+}
+
+.sub-container {
+  flex-basis: 61.2%;
+  padding: 2.5rem;
+}
+
+.submit {
+  width: 80%;
+  padding-right: 0;
+  height: fit-content;
+}
+
+.btn {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 700;
+  background-color: #ff9f18;
+  outline: none;
+  border: 0px;
+}
+
+mat-form-field {
+  width: 80%;
+  /* height: 90%; */
+}

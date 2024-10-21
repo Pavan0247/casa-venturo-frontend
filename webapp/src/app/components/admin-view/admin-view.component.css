@@ -1,0 +1,152 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Apply box-sizing border-box to all elements */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* General styling */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header */
+  header {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  .navigation {
+    flex-basis: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .navigation ul li {
+
+    flex-basis: 20%;
+    margin: 15px 0;
+  }
+  
+  .navigation ul li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation ul li a mat-icon {
+    margin-right: 10px;
+  }
+  
+  /* Dashboard Content */
+  .dashboard {
+    flex-basis: 85%;
+    padding: 20px;
+  }
+  
+  /* Special Section */
+  .special {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label-title {
+    text-align: center;
+    flex-basis: 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .counter-numbers {
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+  }
+  
+  /* Pie Chart */
+  .pie-chart {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  .vendor-pie  {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  /* City Population */
+  .city-pop, .city-avg-price {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vendor-pop-base, .user-pop-base {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styling for Logout button */
+  a.nav:last-child {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  a.nav:last-child:hover {
+    background-color: #c82333;
+  }
+  

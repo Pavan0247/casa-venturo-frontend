@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User-edit-Details-Page</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="background">
+      <div class="bkg-left"></div>
+      <div class="bkg-right"></div>
+    </div>
+    <div class="container">
+      <div class="image">
+        <img src="img2.jpg" alt="" />
+      </div>
+
+      <div class="sub-container">
+        <div class="header">Update Your Profile</div>
+
+        <div class="form">
+          <form>
+          
+            <label for="username">Username:</label>
+            <input type="text" class="my2" id="username" [value]="userProfile.userName">
+
+            <label for="firstName">First Name:</label>
+            <input type="text" class="my2" id="firstName" [(ngModel)]="userProfile.firstName" name="firstName">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="my2" id="lastName" [(ngModel)]="userProfile.lastName" name="lastName">
+
+            <label for="email">Email:</label>
+            <input type="email" class="my2" id="email" [(ngModel)]="userProfile.email" name="email">
+
+            <label for="dob">Date of Birth</label>
+            <input class="my2" class="my2" type="date" id="dob" [(ngModel)]="userProfile.dob" name = "dob">
+
+            <label for="gender">Gender</label>
+            <select class="my2" class="my2" id="gender" [(ngModel)]="userProfile.gender" name = "gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="password">Password:</label>
+            <input class="my2" type="password" id="password" [value]="userProfile.passwordHash" name="passwordHash">
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input class="my2" type="text" id="phoneNumber" [(ngModel)]="userProfile.phoneNumber" name="phoneNumber">
+
+            <label for="address">Address:</label>
+            <textarea class="my2" id="address" [(ngModel)]="userProfile.address" rows="3" cols="66" name="address"></textarea>
+
+          </form>
+        </div>
+        <button class="btn" (click)="saveProfile()">Save Profile</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

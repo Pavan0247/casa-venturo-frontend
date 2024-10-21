@@ -1,0 +1,137 @@
+body {
+  background: rgb(52, 209, 152);
+  background: radial-gradient(
+    circle,
+    rgba(52, 209, 152, 1) 0%,
+    rgba(47, 209, 153, 1) 50%,
+    rgba(40, 214, 151, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80vw;
+  height: fit-content;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px black;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 0;
+}
+
+.left-window {
+  position: relative;
+  flex-basis: 40%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  /* background-color: #2fd199; */
+  border-radius: 2rem 0rem 0rem 2rem;
+  background: rgb(39, 183, 134);
+  background: linear-gradient(
+    0deg,
+    rgba(39, 183, 134, 1) #27b786,
+    rgba(44, 198, 144, 1) 50%,
+    rgba(50, 215, 157, 1) 100%
+  );
+}
+
+.shape {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  clip-path: polygon(
+    100% 100%,
+    90% 83%,
+    77% 66%,
+    60% 53%,
+    45% 43%,
+    33% 34%,
+    24% 26%,
+    15% 14%,
+    6% 0,
+    100% 0
+  );
+  display: flex;
+}
+
+.left-window img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+.right-window {
+  padding: 5%;
+  flex-basis: 60%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 100%;
+  height: 10vh;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.role{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+mat-slider{
+    width: 100%;
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form {
+  flex-basis: 80%;
+}
+mat-form-field {
+  width: 100%;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: #39cf9c;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 2rem 2rem 2rem 2rem;
+  color: #fff;
+}
+.forgot-password {
+  color: rgb(73, 73, 73);
+  text-align: end;
+  padding-bottom: 5%;
+  padding-top: 0%;
+}
+
+.forgot-password:hover {
+  cursor: grab;
+}
+.new-user {
+  padding-top: 5%;
+  color: rgb(73, 73, 73);
+  font-size: 1.1rem;
+  text-align: center;
+}
+.new-user:hover {
+  cursor: grab;
+}

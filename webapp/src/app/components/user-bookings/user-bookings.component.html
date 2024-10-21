@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <app-header style="position: sticky; top: 0; z-index: 50"></app-header> -->
+    <app-common-header style="position: sticky; top: 0; z-index: 10"></app-common-header>
+    <div class="content">
+      <app-back-btn style="z-index: 40;"></app-back-btn>
+      <div class="grid-item" *ngFor="let booking of bookings">
+        <app-booking-card-user [booking]="booking"></app-booking-card-user>
+      </div>
+      <app-scroll-up></app-scroll-up>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

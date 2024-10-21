@@ -1,0 +1,79 @@
+.add-btn {
+  width: 10vw;
+  height: 5vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10rem;
+  right: 3rem;
+  transition: background-color 0.6s ease-in-out;
+  transform: scale(1);
+  color: black;
+}
+
+.add-btn:hover {
+  border: none;
+  outline: none;
+  background-color: #00af5d; 
+  transform: scale(1.01); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.close {
+  height: 100%;
+  padding-top: 2%;
+}
+
+mat-icon {
+  background: red;
+}
+.overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.769);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 5vh;
+  grid-column-gap: 5vh;
+  justify-content: space-around;
+  padding-top: 5%;
+  height: max-content;
+}
+
+.grid-item {
+  width: 20rem;
+  height: fit-content;
+}
+
+.scroll-to-top-button {
+  width: 6vh;
+  height: 6vh;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 10;
+  background-color: #1cd57c;
+  color: #fff;
+  border: none;
+  border-radius: 60%;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #00525d;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <app-back-btn style="z-index: 10;"></app-back-btn>
+      <div class="center-screen">
+        <div class="left"><img src="assets/images/leaf.png" alt="" /></div>
+        <div class="mid">
+          <div class="top">get in</div>
+          <div class="bottom">touch</div>
+          <div class="company-name">CasaVenturo</div>
+          <div class="company-phone">+91 9182736450</div>
+          <div class="company-address">
+            Block-2, A-wing, 6th Floor, DLF Cybercity, Electronic City,
+            Bangalore
+          </div>
+        </div>
+        <div class="buldge">
+          <div class="arrow"><mat-icon>arrow_forward</mat-icon></div>
+        </div>
+        <div class="right">
+          <form action="" [formGroup]="contactForm" class="form">
+            <mat-form-field>
+              <mat-label>Your Name</mat-label>
+              <input
+                matInput
+                placeholder="Enter your name"
+                formControlName="name"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Your Email</mat-label>
+              <input
+                matInput
+                placeholder="Enter your email"
+                formControlName="email"
+              />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Leave a comment</mat-label>
+              <textarea
+                matInput
+                placeholder="Ex. It makes me feel..."
+                formControlName="message"
+              ></textarea>
+            </mat-form-field>
+          </form>
+          <button mat-stroked-button style="color: white" (click)="submit()">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

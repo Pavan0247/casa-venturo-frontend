@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <app-header-vendor style="position: sticky; top: 0; z-index: 10"></app-header-vendor> -->
+    <app-common-header style="position: sticky; top: 0; z-index: 50"></app-common-header>
+    <app-back-btn style="z-index: 41; position: sticky; "></app-back-btn>
+    <div class="content">
+      <div class="grid-item" *ngFor="let booking of arrayOfBooking">
+        <ng-container *ngFor="let vendor of vendorMapping">
+          <app-booking-card [booking]="booking" [vendor]="vendor"></app-booking-card>
+        </ng-container>
+      </div>
+      <app-scroll-up></app-scroll-up>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

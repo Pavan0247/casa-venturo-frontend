@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Vendor Landing Dashboard</title>
+  
+  
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="assets/WHITELOGO.png" alt="Logo">
+    <div class="header-buttons">
+      <button class="faq-button">FAQ</button>
+      <button class="logout-button">Log Out</button>
+    </div>
+  </div>
+  <div class="dashboard-container">
+    <div class="user-profile">
+<br>    <h2>Vendor Profile</h2> <br>
+    <div class="profile-details">
+      <p><strong>Name:</strong> Pep Guardiola</p>
+      <p><strong>Email:</strong> pep@mcfc.com</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>  <br>
+      <!-- Add more profile details here -->
+    </div>
+  </div>
+
+  <div class="services-section">
+    <div class="service-grid">
+      
+      <!-- Service Grid - Repeat for each service -->
+      <div class="service-card">
+        <h3>Service</h3>
+        <p>Category: Wiring</p>
+        <p>Price: Rs. 599</p><br>
+        <!-- Add more service details here -->
+      </div>
+      <!-- Repeat for each service -->
+    </div>
+  </div>
+
+  <div class="reviews-section">
+    <div class="review-grid">
+      <!-- Review Grid - Repeat for each review -->
+      <div class="review-card">
+        <h3>Feedback by - Arnab</h3>
+        <p>Rating: ★★★★☆</p>
+        <p>Review: The guy came and installed everything, hence, I was able to play Valorant. </p>
+        <!-- Add more review details here --> <br><br>
+      </div>
+      <!-- Repeat for each review -->
+    </div>
+  </div>
+
+  <div class="payments-section">
+    <div class="payment-details">
+      <br><br>
+      <p><strong>Earnings:</strong> Total = Rs. 10,234</p>
+      <p><strong>Last Payment:</strong> Rs. 1000 (July 2023)</p> <br>
+      <!-- Add more payment details here -->
+    </div>
+  </div>
+
+  <button class="post-button" (click)="gotoVendor() ">Post Your Own Services</button>
+</div>
+
+</body>
+</html>

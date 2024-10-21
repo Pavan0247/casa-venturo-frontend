@@ -1,0 +1,17 @@
+::ng-deep .dialog-class .mat-dialog-container {
+
+    border: 1px solid;
+    text-align: center;
+    background: linear-gradient(to right, #a7ce93, #c5f1ab); 
+    padding: 20px;
+}
+
+.btn-color {
+    background-color: #63b968;
+    border: 1px solid;
+    color: #fff;
+}
+
+.clickButton {
+    margin: 1rem;
+}

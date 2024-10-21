@@ -1,0 +1,140 @@
+<!-- <div class="mx-auto justify-content-start align-items-center" style="min-height: 100vh; width: 70%">
+    <div class="mt-4 mb-4">
+        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+                <input formControlName="keyword" type="text" class="form-control" placeholder="Search Field" required />
+                <div>
+                    <select id="options" formControlName="options" class="form-select">
+                        <option value="">Search By</option>
+                        <option value="location">Location</option>
+                        <option value="serviceType">Service Type</option>
+                        <option value="category">Category</option>
+                        <option value="description">Description</option>
+                        <option value="author">Author</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <button class="btn btn-success" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="" *ngFor="let news of newslist">
+        <div class="card mb-4">
+            <div class="d-flex card-header justify-content-between align-items-center">
+                <h2 class="pt-2">{{news.newsId}}</h2>
+                <h4>{{news.newsAuthor}}</h4>
+                <h4>Price: 90.0</h4>
+                <a href="#" class="btn btn-primary">Book</a>
+            </div>
+            <div class="d-flex justify-content-between">
+            <div class="card-body">
+                <h3 class="card-title">{{news.newsTitle}}</h3>
+                <p class="card-text">
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                </p>
+            </div>
+            <div class="m-4">
+            <img src="assets\images\VendorRegistrationG.png" width="100px" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+
+  
+</div> -->
+
+
+<section>
+    <div class="d-flex justify-content-start header">
+        <div class="image"><img src="assets/WHITELOGO.png"  width="10px" alt="Logo" /></div>
+    </div>
+<div class="mx-auto justify-content-start align-items-center" style="min-height: 100vh; width: 70%; ">
+    <div class="pt-4 mb-4">
+        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+                <input formControlName="keyword" type="text" class="form-control" placeholder="Search Field" required />
+                <div>
+                    <select id="options" formControlName="options" class="form-select">
+                        <option value="">Search By</option>
+                        <option value="location">Location</option>
+                        <option value="serviceType">Service Type</option>
+                        <option value="category">Category</option>
+                        <option value="description">Description</option>
+                        <option value="author">Author</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <button class="btn btn-success" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <div class="" *ngFor="let news of newslist"> -->
+        <div class="card mb-4">
+            <div class="d-flex card-header justify-content-between align-items-center mycolor" >
+                <h3 class="pt-2">Plumber Pros</h3>
+                <h5>Plumbing</h5>
+                <h4>Price: 90.0</h4>
+                <a (click)="openDialog()" class="btn btn-success">Book</a>
+            </div>
+            <div class="d-flex justify-content-between">
+            <div class="card-body">
+                <h4 class="card-title">Home Services</h4>
+                <p class="card-text">
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    ----------------------------------Expert plumbing services for repairs and installations-------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                    -----------------------------------------------------------------------
+                </p>
+            </div>
+            <div class="m-4">
+            <img src="assets\images\VendorRegistrationG.png" width="130px" alt="">
+            </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+</section>
+
+
+
+<!-- <div class="" *ngFor="let news of newslist">
+    <mat-card>
+        <mat-card-content><div>
+            {{news.newsId}}
+            {{news.newsTitle}}
+            {{news.newsBody}}
+            {{news.newsAuthor}}
+        </div></mat-card-content>
+      </mat-card>
+      <mat-divider></mat-divider>
+</div> -->
+
+<!-- <mat-accordion>
+    <div class="" *ngFor="let news of newslist">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ news.newsTitle }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{ news.newsAuthor }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{ news.newsBody }}</p>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion> -->

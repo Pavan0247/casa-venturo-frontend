@@ -1,0 +1,13 @@
+.content{
+    margin-top: 2rem;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 2rem;
+}
+
+.grid-item{
+    width: 100%;
+    height: fit-content;
+}

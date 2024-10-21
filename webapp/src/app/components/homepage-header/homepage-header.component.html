@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <img src="assets/images/black-logo.png" alt="Logo" />
+        </div>
+        <div class="spacer"></div>
+        <div class="search">
+          CasaVenturo
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-link">
+          <a routerLink="/about-us" id="specific">About Us</a>
+        </div>
+        <div class="header-link">
+          <a routerLink="/contact-us" id="specific">Contact Us</a>
+        </div>
+        <div class="profile-button">
+          <button class="login-button" (click)="goto()">Signin / Signup</button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

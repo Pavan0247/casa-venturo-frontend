@@ -1,0 +1,79 @@
+html,body {
+    height:100%;
+    width:100%;
+    background-color:#CFE1B9;
+    overflow:hidden;
+    color:#CFE1B9;
+    font-family: 'Montserrat', sans-serif;
+ }
+ .fa-star {
+  color: gold; /* Star color when filled */
+}
+.fa-star-half-alt {
+  color: gold; /* Star color when half-filled */
+  position: relative;
+  transform: scaleX(0.5); /*  width to display half-filled star */
+  left: -8px; /*  position to align with the full star */
+}
+/* Defining empty star icon */
+.fa-star-o {
+color: #ccc; /* Star color when empty */
+}
+
+/* Styling the rating container */
+.rating {
+display: inline-block;
+font-size: 24px; /* size of the stars */
+}
+ .feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Feedback Form Styles */
+  form {
+    margin-bottom: 20px;
+  }
+
+  button[type="submit"] {
+    background-color: #25b831;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color:#25b831;
+  }
+  
+  /* Feedback List Styles */
+  .feedback-list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  ngb-rating{
+    color: rgb(255, 196, 0);
+    font-size: 50px;
+  }
+  .mt{
+    margin-top: 30px;
+  }
